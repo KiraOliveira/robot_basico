@@ -11,11 +11,11 @@ Test Teardown       Fechar navegador
 ### Casos de Teste Exemplares - Procedural
 
 *** Test Case ***
-#Caso de Teste 01: Pesquisar Produto Existente
-#    Acessar a página home do site
-#    Digitar o nome do produto "Blouse" no campo de Pesquisa
-#    Clicar no botão pesquisar
-#    Conferir se o produto "Blouse" foi listado no site
+Caso de Teste 01: Pesquisar Produto Existente
+    Acessar a página home do site
+    Digitar o nome do produto "Blouse" no campo de Pesquisa
+    Clicar no botão pesquisar
+    Conferir se o produto "Blouse" foi listado no site
 
 
 Caso de Teste 02: Pesquisar Produto não Existente
