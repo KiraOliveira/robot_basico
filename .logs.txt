@@ -1,0 +1,117 @@
+==============================================================================
+20210531 18:29:27.619 - INFO - + START SUITE: TestSitePractice [ ]
+==============================================================================
+20210531 18:29:27.620 - INFO - +- START TEST: Caso de Teste 01: Pesquisar Produto Existente [ ]
+------------------------------------------------------------------------------
+20210531 18:29:27.621 - INFO - +-- START SETUP: Resource.Abrir navegador [ ]
+20210531 18:29:27.622 - INFO - +--- START KEYWORD: SeleniumLibrary.Open Browser [ about:blank | ${BROWSER} ]
+20210531 18:29:27.623 - INFO - Opening browser 'firefox' to base url 'about:blank'.
+20210531 18:29:27.624 - INFO - Firefox driver log is always forced to to: /home/kira/Documentos/robot_basico/geckodriver-9.log
+20210531 18:29:31.561 - DEBUG - Opened browser with session id f95d1bf3-34b6-4ba2-b837-94d140078e2c.
+20210531 18:29:31.561 - INFO - +--- END KEYWORD: SeleniumLibrary.Open Browser (3939)
+20210531 18:29:31.564 - INFO - +-- END SETUP: Resource.Abrir navegador (3941)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:31.564 - INFO - +-- START KEYWORD: Resource.Acessar a página home do site [ ]
+20210531 18:29:31.566 - INFO - +--- START KEYWORD: SeleniumLibrary.Go To [ http://automationpractice.com ]
+20210531 18:29:31.566 - INFO - Opening url 'http://automationpractice.com'
+20210531 18:29:37.936 - INFO - +--- END KEYWORD: SeleniumLibrary.Go To (6370)
+20210531 18:29:37.936 - INFO - +--- START KEYWORD: SeleniumLibrary.Title Should Be [ My Store ]
+20210531 18:29:37.956 - INFO - Page title is 'My Store'.
+20210531 18:29:37.958 - INFO - +--- END KEYWORD: SeleniumLibrary.Title Should Be (22)
+20210531 18:29:37.959 - INFO - +-- END KEYWORD: Resource.Acessar a página home do site (6394)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:37.959 - INFO - +-- START KEYWORD: Resource.Digitar o nome do produto "Blouse" no campo de Pesquisa [ ]
+20210531 18:29:37.963 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Text [ name=search_query | ${PRODUTO} ]
+20210531 18:29:37.974 - INFO - Typing text 'Blouse' into text field 'name=search_query'.
+20210531 18:29:38.089 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Text (127)
+20210531 18:29:38.091 - INFO - +-- END KEYWORD: Resource.Digitar o nome do produto "Blouse" no campo de Pesquisa (130)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:38.091 - INFO - +-- START KEYWORD: Resource.Clicar no botão pesquisar [ ]
+20210531 18:29:38.092 - INFO - +--- START KEYWORD: SeleniumLibrary.Click Element [ name=submit_search ]
+20210531 18:29:38.093 - INFO - Clicking element 'name=submit_search'.
+20210531 18:29:39.570 - INFO - +--- END KEYWORD: SeleniumLibrary.Click Element (1478)
+20210531 18:29:39.571 - INFO - +-- END KEYWORD: Resource.Clicar no botão pesquisar (1480)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:39.572 - INFO - +-- START KEYWORD: Resource.Conferir se o produto "Blouse" foi listado no site [ ]
+20210531 18:29:39.573 - INFO - +--- START KEYWORD: SeleniumLibrary.Wait Until Element Is Visible [ css=#center_column > h1 ]
+20210531 18:29:39.669 - INFO - +--- END KEYWORD: SeleniumLibrary.Wait Until Element Is Visible (97)
+20210531 18:29:39.683 - INFO - +--- START KEYWORD: SeleniumLibrary.Title Should Be [ Search - My Store ]
+20210531 18:29:39.691 - INFO - Page title is 'Search - My Store'.
+20210531 18:29:39.692 - INFO - +--- END KEYWORD: SeleniumLibrary.Title Should Be (8)
+20210531 18:29:39.692 - INFO - +--- START KEYWORD: SeleniumLibrary.Element Should Be Visible [ css=#center_column > h1 > span.heading-counter ]
+20210531 18:29:39.720 - INFO - Element 'css=#center_column > h1 > span.heading-counter' is displayed.
+20210531 18:29:39.721 - INFO - +--- END KEYWORD: SeleniumLibrary.Element Should Be Visible (29)
+20210531 18:29:39.721 - INFO - +--- START KEYWORD: SeleniumLibrary.Page Should Contain Image [ xpath=//*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/7/7-home_default.jpg'] ]
+20210531 18:29:39.732 - INFO - Current page contains image 'xpath=//*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']'.
+20210531 18:29:39.732 - INFO - +--- END KEYWORD: SeleniumLibrary.Page Should Contain Image (11)
+20210531 18:29:39.732 - INFO - +--- START KEYWORD: SeleniumLibrary.Page Should Contain Link [ xpath=//*[@id="center_column"]//a[@class="product-name"][contains(text(), "${PRODUTO}")] ]
+20210531 18:29:39.743 - INFO - Current page contains link 'xpath=//*[@id="center_column"]//a[@class="product-name"][contains(text(), "Blouse")]'.
+20210531 18:29:39.743 - INFO - +--- END KEYWORD: SeleniumLibrary.Page Should Contain Link (11)
+20210531 18:29:39.744 - INFO - +-- END KEYWORD: Resource.Conferir se o produto "Blouse" foi listado no site (171)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:39.744 - INFO - +-- START TEARDOWN: Resource.Fechar navegador [ ]
+20210531 18:29:39.745 - INFO - +--- START KEYWORD: SeleniumLibrary.Close Browser [ ]
+20210531 18:29:39.745 - DEBUG - Closing browser with session id f95d1bf3-34b6-4ba2-b837-94d140078e2c.
+20210531 18:29:40.613 - INFO - +--- END KEYWORD: SeleniumLibrary.Close Browser (867)
+20210531 18:29:40.613 - INFO - +-- END TEARDOWN: Resource.Fechar navegador (869)
+------------------------------------------------------------------------------
+20210531 18:29:40.614 - INFO - +- END TEST: Caso de Teste 01: Pesquisar Produto Existente (12994)
+------------------------------------------------------------------------------
+20210531 18:29:40.615 - INFO - +- START TEST: Caso de Teste 02: Pesquisar Produto não Existente [ ]
+------------------------------------------------------------------------------
+20210531 18:29:40.616 - INFO - +-- START SETUP: Resource.Abrir navegador [ ]
+20210531 18:29:40.617 - INFO - +--- START KEYWORD: SeleniumLibrary.Open Browser [ about:blank | ${BROWSER} ]
+20210531 18:29:40.617 - INFO - Opening browser 'firefox' to base url 'about:blank'.
+20210531 18:29:40.618 - INFO - Firefox driver log is always forced to to: /home/kira/Documentos/robot_basico/geckodriver-10.log
+20210531 18:29:45.353 - DEBUG - Opened browser with session id 1f08012a-c3df-4cfb-be98-4fedb6fa20b4.
+20210531 18:29:45.354 - INFO - +--- END KEYWORD: SeleniumLibrary.Open Browser (4736)
+20210531 18:29:45.354 - INFO - +-- END SETUP: Resource.Abrir navegador (4738)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:45.355 - INFO - +-- START KEYWORD: Resource.Acessar a página home do site [ ]
+20210531 18:29:45.364 - INFO - +--- START KEYWORD: SeleniumLibrary.Go To [ http://automationpractice.com ]
+20210531 18:29:45.365 - INFO - Opening url 'http://automationpractice.com'
+20210531 18:29:49.682 - INFO - +--- END KEYWORD: SeleniumLibrary.Go To (4318)
+20210531 18:29:49.683 - INFO - +--- START KEYWORD: SeleniumLibrary.Title Should Be [ My Store ]
+20210531 18:29:49.688 - INFO - Page title is 'My Store'.
+20210531 18:29:49.688 - INFO - +--- END KEYWORD: SeleniumLibrary.Title Should Be (5)
+20210531 18:29:49.689 - INFO - +-- END KEYWORD: Resource.Acessar a página home do site (4333)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:49.689 - INFO - +-- START KEYWORD: Resource.Digitar o nome do produto "itemNãoExistente" no campo de Pesquisa [ ]
+20210531 18:29:49.690 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Text [ name=search_query | ${PRODUTO} ]
+20210531 18:29:49.691 - INFO - Typing text 'itemNãoExistente' into text field 'name=search_query'.
+20210531 18:29:49.833 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Text (143)
+20210531 18:29:49.834 - INFO - +-- END KEYWORD: Resource.Digitar o nome do produto "itemNãoExistente" no campo de Pesquisa (145)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:49.834 - INFO - +-- START KEYWORD: Resource.Clicar no botão pesquisar [ ]
+20210531 18:29:49.835 - INFO - +--- START KEYWORD: SeleniumLibrary.Click Element [ name=submit_search ]
+20210531 18:29:49.836 - INFO - Clicking element 'name=submit_search'.
+20210531 18:29:51.473 - INFO - +--- END KEYWORD: SeleniumLibrary.Click Element (1637)
+20210531 18:29:51.473 - INFO - +-- END KEYWORD: Resource.Clicar no botão pesquisar (1639)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:51.474 - INFO - +-- START KEYWORD: Resource.Conferir mensagem de erro "No results were found your search "itemNãoExistente"" [ ]
+20210531 18:29:51.474 - INFO - +--- START KEYWORD: SeleniumLibrary.Wait Until Element Is Visible [ xpath=//*[@id="center_column"]/p[@class='alert alert-warning'] ]
+20210531 18:29:51.603 - INFO - +--- END KEYWORD: SeleniumLibrary.Wait Until Element Is Visible (129)
+20210531 18:29:51.603 - INFO - +--- START KEYWORD: SeleniumLibrary.Title Should Be [ Search - My Store ]
+20210531 18:29:51.613 - INFO - Page title is 'Search - My Store'.
+20210531 18:29:51.613 - INFO - +--- END KEYWORD: SeleniumLibrary.Title Should Be (10)
+20210531 18:29:51.614 - INFO - +--- START KEYWORD: SeleniumLibrary.Element Should Be Visible [ css=#center_column > h1 ]
+20210531 18:29:51.645 - INFO - Element 'css=#center_column > h1' is displayed.
+20210531 18:29:51.645 - INFO - +--- END KEYWORD: SeleniumLibrary.Element Should Be Visible (31)
+20210531 18:29:51.645 - INFO - +--- START KEYWORD: SeleniumLibrary.Element Should Be Visible [ css=#center_column > h1 > span ]
+20210531 18:29:51.669 - INFO - Element 'css=#center_column > h1 > span' is displayed.
+20210531 18:29:51.669 - INFO - +--- END KEYWORD: SeleniumLibrary.Element Should Be Visible (24)
+20210531 18:29:51.670 - INFO - +--- START KEYWORD: SeleniumLibrary.Page Should Contain Element [ xpath=//*[@id="center_column"]/p[@class='alert alert-warning'] ]
+20210531 18:29:51.676 - INFO - Current page contains element 'xpath=//*[@id="center_column"]/p[@class='alert alert-warning']'.
+20210531 18:29:51.676 - INFO - +--- END KEYWORD: SeleniumLibrary.Page Should Contain Element (6)
+20210531 18:29:51.677 - INFO - +-- END KEYWORD: Resource.Conferir mensagem de erro "No results were found your search "itemNãoExistente"" (204)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20210531 18:29:51.677 - INFO - +-- START TEARDOWN: Resource.Fechar navegador [ ]
+20210531 18:29:51.678 - INFO - +--- START KEYWORD: SeleniumLibrary.Close Browser [ ]
+20210531 18:29:51.678 - DEBUG - Closing browser with session id 1f08012a-c3df-4cfb-be98-4fedb6fa20b4.
+20210531 18:29:52.625 - INFO - +--- END KEYWORD: SeleniumLibrary.Close Browser (946)
+20210531 18:29:52.625 - INFO - +-- END TEARDOWN: Resource.Fechar navegador (948)
+------------------------------------------------------------------------------
+20210531 18:29:52.626 - INFO - +- END TEST: Caso de Teste 02: Pesquisar Produto não Existente (12011)
+------------------------------------------------------------------------------
+20210531 18:29:52.629 - INFO - + END SUITE: TestSitePractice (25185)
+==============================================================================

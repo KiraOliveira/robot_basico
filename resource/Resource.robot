@@ -37,7 +37,7 @@ Conferir se o produto "${PRODUTO}" foi listado no site
     Page Should Contain Link            xpath=//*[@id="center_column"]//a[@class="product-name"][contains(text(), "${PRODUTO}")]  
 
 
-Conferir mensagem de erro "No results were found your search ${MENSAGEM_ALERTA}" 
+Conferir mensagem de erro "${MENSAGEM_ALERTA}"
     Wait Until Element Is Visible       xpath=//*[@id="center_column"]/p[@class='alert alert-warning']
 #    Element Text Should Be              xpath=//*[@id="center_column"]/p[@class='alert alert-warning']                ${MENSAGEM_ALERTA}       
     Title Should Be                     Search - My Store
@@ -47,6 +47,8 @@ Conferir mensagem de erro "No results were found your search ${MENSAGEM_ALERTA}"
 
 ###Descobrir o que deu errado nesse.    
 #    Element Text Should Be                //*[@id="center_column"]/p[@class='alert alert-warning'][contains(text(), "${MENSAGEM_ALERTA}")] 
+
+
 
 
 
