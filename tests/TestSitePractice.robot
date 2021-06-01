@@ -23,5 +23,6 @@ Caso de Teste 02: Pesquisar Produto não Existente
     Digitar o nome do produto "itemNãoExistente" no campo de Pesquisa
     Clicar no botão pesquisar
     Conferir mensagem de erro "No results were found your search "itemNãoExistente""
+    
 
 *** Keywords ***
