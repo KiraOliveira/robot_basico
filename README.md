@@ -19,9 +19,19 @@ Pomofocus,
 GitHub.
 
 -------------------------------------------------------------------
+
 2º Dia
 
 Finalizado módulo 4:
 
 Variáveis
 Visto Argumentos, Escopo de Variáveis e Tipos de Variáveis.
+
+---------------------------------------------------------------------
+
+3º Dia
+
+Finalizado Módulo 5
+Logs
+IF
+Novos Loops - FOR
