@@ -1,0 +1,8 @@
+1622596853801	geckodriver	INFO	Listening on 127.0.0.1:55445
+1622596853812	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYZIV1W"
+1622596854417	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622596856734	Marionette	INFO	Listening on port 38455
+1622596856849	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622596861513	Marionette	INFO	Stopped listening on port 38455
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
