@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.8.5 on linux)" generated="20210602 19:49:01.178" rpa="false" schemaversion="2">
+<suite id="s1" name="UsandoLoopsNew" source="/home/kira/Documentos/robot_basico/Estruturas/UsandoLoopsNew.robot">
+<test id="s1-t1" name="Teste de REPEAT KEYWORD=">
+<kw name="Usando Repeat keyword">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.208" endtime="20210602 19:49:01.209"/>
+</kw>
+<kw name="Repeat Keyword" library="BuiltIn">
+<arg>4x</arg>
+<arg>Log To Console</arg>
+<arg>Minha repetição da keyword!!!</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<msg timestamp="20210602 19:49:01.209" level="INFO">Repeating keyword, round 1/4.</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha repetição da keyword!!!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.210" endtime="20210602 19:49:01.210"/>
+</kw>
+<msg timestamp="20210602 19:49:01.210" level="INFO">Repeating keyword, round 2/4.</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha repetição da keyword!!!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.210" endtime="20210602 19:49:01.211"/>
+</kw>
+<msg timestamp="20210602 19:49:01.211" level="INFO">Repeating keyword, round 3/4.</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha repetição da keyword!!!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.211" endtime="20210602 19:49:01.211"/>
+</kw>
+<msg timestamp="20210602 19:49:01.211" level="INFO">Repeating keyword, round 4/4.</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha repetição da keyword!!!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.212" endtime="20210602 19:49:01.212"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.209" endtime="20210602 19:49:01.212"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.207" endtime="20210602 19:49:01.212"/>
+</kw>
+<doc>Chama uma mesma keyword várias vezes</doc>
+<status status="PASS" starttime="20210602 19:49:01.206" endtime="20210602 19:49:01.213"/>
+</test>
+<test id="s1-t2" name="Teste de FOR do tipo IN RANGE=">
+<kw name="Usando FOR IN RANGE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.215" endtime="20210602 19:49:01.215"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${CONTADOR}</var>
+<value>0</value>
+<value>5</value>
+<iter>
+<var name="${CONTADOR}">0</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha posição agora é:</arg>
+<arg>${CONTADOR}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20210602 19:49:01.217" level="FAIL">AttributeError: 'int' object has no attribute 'lower'</msg>
+<status status="FAIL" starttime="20210602 19:49:01.216" endtime="20210602 19:49:01.217"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Minha posição agora é:</arg>
+<arg>${CONTADOR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210602 19:49:01.217" endtime="20210602 19:49:01.217"/>
+</kw>
+<status status="FAIL" starttime="20210602 19:49:01.216" endtime="20210602 19:49:01.217"/>
+</iter>
+<status status="FAIL" starttime="20210602 19:49:01.215" endtime="20210602 19:49:01.217"/>
+</for>
+<status status="FAIL" starttime="20210602 19:49:01.214" endtime="20210602 19:49:01.218"/>
+</kw>
+<doc>Faz um loop dentro de um intervalo que você passar</doc>
+<status status="FAIL" starttime="20210602 19:49:01.214" endtime="20210602 19:49:01.218">AttributeError: 'int' object has no attribute 'lower'</status>
+</test>
+<test id="s1-t3" name="Teste de for do tipo IN=">
+<kw name="Usando FOR IN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.220" endtime="20210602 19:49:01.221"/>
+</kw>
+<for flavor="IN">
+<var>${FRUTAS}</var>
+<value>@{MINHA_LISTA_DE_FRUTAS}</value>
+<iter>
+<var name="${FRUTAS}">maça</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.222" endtime="20210602 19:49:01.222"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.223" endtime="20210602 19:49:01.223"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.222" endtime="20210602 19:49:01.223"/>
+</iter>
+<iter>
+<var name="${FRUTAS}">abacaxi</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.223" endtime="20210602 19:49:01.224"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.224" endtime="20210602 19:49:01.225"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.223" endtime="20210602 19:49:01.225"/>
+</iter>
+<iter>
+<var name="${FRUTAS}">banana</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.225" endtime="20210602 19:49:01.226"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.226" endtime="20210602 19:49:01.226"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.225" endtime="20210602 19:49:01.226"/>
+</iter>
+<iter>
+<var name="${FRUTAS}">morango</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.226" endtime="20210602 19:49:01.227"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.227" endtime="20210602 19:49:01.227"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.226" endtime="20210602 19:49:01.227"/>
+</iter>
+<iter>
+<var name="${FRUTAS}">laranja</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.228" endtime="20210602 19:49:01.228"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.228" endtime="20210602 19:49:01.229"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.227" endtime="20210602 19:49:01.229"/>
+</iter>
+<status status="PASS" starttime="20210602 19:49:01.221" endtime="20210602 19:49:01.229"/>
+</for>
+<status status="PASS" starttime="20210602 19:49:01.220" endtime="20210602 19:49:01.229"/>
+</kw>
+<doc>Faz um loop percorrendo a lista que você passar</doc>
+<status status="PASS" starttime="20210602 19:49:01.219" endtime="20210602 19:49:01.229"/>
+</test>
+<test id="s1-t4" name="Teste de FOR do tipo IN ENUMERATE=">
+<kw name="Usando FOR IN ENUMERATE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.231" endtime="20210602 19:49:01.231"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<var>${INDICE}</var>
+<var>${FRUTAS}</var>
+<value>@{MINHA_LISTA_DE_FRUTAS}</value>
+<iter>
+<var name="${INDICE}">0</var>
+<var name="${FRUTAS}">maça</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${INDICE}--&gt;${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.232" endtime="20210602 19:49:01.233"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.233" endtime="20210602 19:49:01.233"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.232" endtime="20210602 19:49:01.234"/>
+</iter>
+<iter>
+<var name="${INDICE}">1</var>
+<var name="${FRUTAS}">abacaxi</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${INDICE}--&gt;${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.234" endtime="20210602 19:49:01.235"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.235" endtime="20210602 19:49:01.235"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.234" endtime="20210602 19:49:01.235"/>
+</iter>
+<iter>
+<var name="${INDICE}">2</var>
+<var name="${FRUTAS}">banana</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${INDICE}--&gt;${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.236" endtime="20210602 19:49:01.236"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.236" endtime="20210602 19:49:01.237"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.235" endtime="20210602 19:49:01.237"/>
+</iter>
+<iter>
+<var name="${INDICE}">3</var>
+<var name="${FRUTAS}">morango</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${INDICE}--&gt;${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.237" endtime="20210602 19:49:01.238"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.238" endtime="20210602 19:49:01.238"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.237" endtime="20210602 19:49:01.238"/>
+</iter>
+<iter>
+<var name="${INDICE}">4</var>
+<var name="${FRUTAS}">laranja</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${INDICE}--&gt;${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.239" endtime="20210602 19:49:01.239"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20210602 19:49:01.239" endtime="20210602 19:49:01.240"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.238" endtime="20210602 19:49:01.240"/>
+</iter>
+<status status="PASS" starttime="20210602 19:49:01.232" endtime="20210602 19:49:01.240"/>
+</for>
+<status status="PASS" starttime="20210602 19:49:01.230" endtime="20210602 19:49:01.240"/>
+</kw>
+<doc>Faz um loop percorrendo a lista que você passar e percorre o indíce da lista</doc>
+<status status="PASS" starttime="20210602 19:49:01.230" endtime="20210602 19:49:01.240"/>
+</test>
+<test id="s1-t5" name="Teste de sair do FOR=">
+<kw name="Usando FOR IN com EXIT FOR LOOP IF">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.242" endtime="20210602 19:49:01.243"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<var>${INDICE}</var>
+<var>${FRUTAS}</var>
+<value>@{MINHA_LISTA_DE_FRUTAS}</value>
+<iter>
+<var name="${INDICE}">0</var>
+<var name="${FRUTAS}">maça</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${INDICE}--&gt;${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.244" endtime="20210602 19:49:01.244"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${FRUTAS}' == 'banana'</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20210602 19:49:01.245" endtime="20210602 19:49:01.245"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.243" endtime="20210602 19:49:01.245"/>
+</iter>
+<iter>
+<var name="${INDICE}">1</var>
+<var name="${FRUTAS}">abacaxi</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${INDICE}--&gt;${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.246" endtime="20210602 19:49:01.246"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${FRUTAS}' == 'banana'</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20210602 19:49:01.246" endtime="20210602 19:49:01.247"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.246" endtime="20210602 19:49:01.247"/>
+</iter>
+<iter>
+<var name="${INDICE}">2</var>
+<var name="${FRUTAS}">banana</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Minha fruta é:</arg>
+<arg>${INDICE}--&gt;${FRUTAS}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210602 19:49:01.248" endtime="20210602 19:49:01.248"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${FRUTAS}' == 'banana'</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<msg timestamp="20210602 19:49:01.249" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210602 19:49:01.248" endtime="20210602 19:49:01.249"/>
+</kw>
+<status status="PASS" starttime="20210602 19:49:01.247" endtime="20210602 19:49:01.249"/>
+</iter>
+<status status="PASS" starttime="20210602 19:49:01.243" endtime="20210602 19:49:01.249"/>
+</for>
+<status status="PASS" starttime="20210602 19:49:01.242" endtime="20210602 19:49:01.250"/>
+</kw>
+<doc>Você controla quando o FOR dese ser encerrar antes de terminar todos os LOOPS</doc>
+<status status="PASS" starttime="20210602 19:49:01.241" endtime="20210602 19:49:01.250"/>
+</test>
+<doc>Vamos aprender a fazer LOOPS usando o Robot Framework!</doc>
+<status status="FAIL" starttime="20210602 19:49:01.179" endtime="20210602 19:49:01.251"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="1" skip="0" id="s1" name="UsandoLoopsNew">UsandoLoopsNew</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
