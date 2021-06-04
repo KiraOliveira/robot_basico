@@ -1,0 +1,9 @@
+1622771116798	geckodriver	INFO	Listening on 127.0.0.1:34163
+1622771117820	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiler5G3rC"
+1622771119661	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiler5G3rC/search.json.mozlz4", (void 0)))
+1622771123110	Marionette	INFO	Listening on port 36433
+1622771123167	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1622771225354	Marionette	INFO	Stopped listening on port 36433

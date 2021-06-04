@@ -35,3 +35,16 @@ Finalizado Módulo 5
 Logs
 IF
 Novos Loops - FOR
+
+---------------------------------------------------------------------------
+
+4º Dia
+
+Finalizado Módulo 6
+Requests
+Get
+Post
+Put
+Delete
+
+Completando os desafios passados em aulas
