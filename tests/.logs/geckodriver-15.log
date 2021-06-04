@@ -1,0 +1,7 @@
+1622773642364	geckodriver	INFO	Listening on 127.0.0.1:59765
+1622773642382	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekC2mcn"
+1622773643272	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilekC2mcn/search.json.mozlz4", (void 0)))
+1622773646324	Marionette	INFO	Listening on port 45233
+1622773646452	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622773651506	Marionette	INFO	Stopped listening on port 45233
