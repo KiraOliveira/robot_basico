@@ -47,4 +47,10 @@ Post
 Put
 Delete
 
-Completando os desafios passados em aulas
+Completando os desafios passados em aulas.
+
+-----------------------------------------------------------------------------
+
+5º Dia
+
+Realizando os desafios propostos em aula.

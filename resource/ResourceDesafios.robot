@@ -29,16 +29,25 @@ Clicar no botão pesquisar
 
 
 Passar o mouse por cima da categoria "${PRODUTO}" no meu principal superior de categorias
-    Wait Until Element Is Visible       xpath=//*[@id="block_top_menu"]//a[@title="Women"]
-#    Mouse Over      ${PRODUTO}
+    Wait Until Element Is Visible       xpath=//*[@id="header_logo"]//*[@src='http://automationpractice.com/img/logo.jpg']
+    Title Should Be                     My Store
+#    Scroll Element Into View            //*[@id="block_top_menu"]/ul/li[1]//*[@title='Women'][@class='sf-with-ul']
+    Mouse Over      xpath=//*[@id="block_top_menu"]/ul/li[1]//*[@title='Women'][@class='sf-with-ul']
 
 
-Clicar na sub categoria "${SUB_PRODUTO}"
-    Click Link       xpath=//*[@id="block_top_menu"]//a[@title="${SUB_PRODUTO}"]
+Clicar na sub categoria "${SUB_PRODUTO}" 
+#    Scroll Element Into View        xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
+    Element Should Be Enabled       xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
+    Scroll Element Into View        title="Summer Dresses"
+    Click Element       css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a
 
 
 Clicar no botão "${BOTÃO}" do produto
-    Click Button        Add to cart 
+    Wait Until Element Is Visible       css=#center_column > h1 > span.heading-counter
+    Title Should Be                     Search - My Store
+    Element Should Be Enabled       //*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/1/1-home_default.jpg'] 
+    Scroll Element Into View        xpath=//*[@id="center_column"]//*[@title='Add to cart']
+    Click Button        "Add to cart"
 
 
 Clicar no botão "Proceed to checkout"
@@ -53,11 +62,24 @@ Clicar no botão de remoção de produtos(delete) no produto carrinho
 
 
 Clicar no botão superior direito "${LINK}"
-    Clicar Button       css=#header > div.nav > div > div > nav > div.header_user_info > a
+    Wait Until Element Is Visible       xpath=//*[@id="header_logo"]//*[@src='http://automationpractice.com/img/logo.jpg']
+    Title Should Be                     My Store
+    Click Link      xpath=//*[@id="header"]//a[@class='login']
 
-#    Inserir um e-mail válido
-#    Clicar no botão "Create na account"
-#    Preencher os campos obrigatórios
+Inserir um e-mail válido
+       Input Text      css=#email_create       gislaine28@exemplo.com
+
+Clicar no botão "${SUB}"
+    Click Button        css=#SubmitCreate
+
+Preencher os campos obrigatórios
+#    Radio Button Should Be Set To       css=#id_gender2e
+#    Input Text      name="customer_firstname"       Kira
+    Input Text      name="customer_lastname"        Oliveira
+    Input Text      id="email"                      gislaine28@exemplo.com
+    Input Password      name="passwd"                   1234
+
+
 #    Clicar em "Registrar" para finalizar o cadastro
 
 
