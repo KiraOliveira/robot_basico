@@ -1,7 +1,7 @@
 *** Settings ***
 Resource            ../resource/ResourceDesafios.robot
 Test Setup          Abrir navegador
-Test Teardown       Fechar navegador   
+#Test Teardown       Fechar navegador   
 
 
 ### SETUP ele roda keyword antes da suite ou antes de um Teste
@@ -50,7 +50,7 @@ Caso de Teste 06: Adicionar Cliente
     Inserir um e-mail válido
     Clicar no botão "Create na account"
     Preencher os campos obrigatórios
-#    Clicar em "Registrar" para finalizar o cadastro
+    Clicar em "Registrar" para finalizar o cadastro
     
 
 *** Keywords ***
