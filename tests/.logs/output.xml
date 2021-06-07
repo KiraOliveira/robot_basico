@@ -1,68 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.8.5 on linux)" generated="20210604 21:30:11.704" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0.3 (Python 3.8.5 on linux)" generated="20210606 22:38:25.341" rpa="false" schemaversion="2">
 <suite id="s1" name="Desafios" source="/home/kira/Documentos/robot_basico/tests/Desafios.robot">
-<test id="s1-t1" name="Caso de Teste 03: Listar Produtos">
+<test id="s1-t1" name="Caso de Teste 06: Adicionar Cliente">
 <kw name="Abrir navegador" library="ResourceDesafios" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210604 21:30:11.963" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20210604 21:30:11.966" level="INFO">Firefox driver log is always forced to to: /home/kira/Documentos/robot_basico/tests/.logs/geckodriver-26.log</msg>
-<status status="PASS" starttime="20210604 21:30:11.962" endtime="20210604 21:30:15.813"/>
+<msg timestamp="20210606 22:38:25.519" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20210606 22:38:25.520" level="INFO">Firefox driver log is always forced to to: /home/kira/Documentos/robot_basico/tests/.logs/geckodriver-49.log</msg>
+<status status="PASS" starttime="20210606 22:38:25.518" endtime="20210606 22:38:28.484"/>
 </kw>
-<status status="PASS" starttime="20210604 21:30:11.961" endtime="20210604 21:30:15.813"/>
+<status status="PASS" starttime="20210606 22:38:25.517" endtime="20210606 22:38:28.484"/>
 </kw>
 <kw name="Acessar a página home do site" library="ResourceDesafios">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>http://automationpractice.com</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210604 21:30:15.820" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20210604 21:30:15.815" endtime="20210604 21:30:20.794"/>
+<msg timestamp="20210606 22:38:28.486" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20210606 22:38:28.486" endtime="20210606 22:38:36.913"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>My Store</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20210604 21:30:20.808" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" starttime="20210604 21:30:20.795" endtime="20210604 21:30:20.809"/>
+<msg timestamp="20210606 22:38:36.918" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210606 22:38:36.913" endtime="20210606 22:38:36.919"/>
 </kw>
-<status status="PASS" starttime="20210604 21:30:15.814" endtime="20210604 21:30:20.809"/>
+<status status="PASS" starttime="20210606 22:38:28.485" endtime="20210606 22:38:36.919"/>
 </kw>
-<kw name="Passar o mouse por cima da categoria &quot;Women&quot; no meu principal superior de categorias" library="ResourceDesafios" sourcename="Passar o mouse por cima da categoria &quot;${PRODUTO}&quot; no meu principal superior de categorias">
+<kw name="Clicar no botão superior direito &quot;Sign in&quot;" library="ResourceDesafios" sourcename="Clicar no botão superior direito &quot;${LINK}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//*[@id="block_top_menu"]//a[@title="${PRODUTO}"]</arg>
+<arg>xpath=//*[@id="header_logo"]//*[@src='http://automationpractice.com/img/logo.jpg']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210604 21:30:20.811" endtime="20210604 21:30:20.969"/>
+<status status="PASS" starttime="20210606 22:38:36.920" endtime="20210606 22:38:37.030"/>
 </kw>
-<status status="PASS" starttime="20210604 21:30:20.811" endtime="20210604 21:30:20.970"/>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210606 22:38:37.032" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210606 22:38:37.030" endtime="20210606 22:38:37.033"/>
 </kw>
-<kw name="Clicar na sub categoria &quot;Summer Dresses&quot;" library="ResourceDesafios" sourcename="Clicar na sub categoria &quot;${SUB_PRODUTO}&quot;">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="block_top_menu"]//a[@title="${SUB_PRODUTO}"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210604 21:30:20.972" level="INFO">Clicking element 'xpath=//*[@id="block_top_menu"]//a[@title="Summer Dresses"]'.</msg>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header"]//a[@class='login']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210606 22:38:37.033" level="INFO">Clicking link 'xpath=//*[@id="header"]//a[@class='login']'.</msg>
+<status status="PASS" starttime="20210606 22:38:37.033" endtime="20210606 22:38:39.238"/>
+</kw>
+<status status="PASS" starttime="20210606 22:38:36.919" endtime="20210606 22:38:39.239"/>
+</kw>
+<kw name="Inserir um e-mail válido" library="ResourceDesafios">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=#email_create</arg>
+<arg>gislaine28@exemplo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210606 22:38:39.241" level="INFO">Typing text 'gislaine28@exemplo.com' into text field 'css=#email_create'.</msg>
+<status status="PASS" starttime="20210606 22:38:39.240" endtime="20210606 22:38:39.350"/>
+</kw>
+<status status="PASS" starttime="20210606 22:38:39.240" endtime="20210606 22:38:39.350"/>
+</kw>
+<kw name="Clicar no botão &quot;Create na account&quot;" library="ResourceDesafios" sourcename="Clicar no botão &quot;${SUB}&quot;">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=#SubmitCreate</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210606 22:38:39.351" level="INFO">Clicking button 'css=#SubmitCreate'.</msg>
+<status status="PASS" starttime="20210606 22:38:39.351" endtime="20210606 22:38:39.658"/>
+</kw>
+<status status="PASS" starttime="20210606 22:38:39.350" endtime="20210606 22:38:39.659"/>
+</kw>
+<kw name="Preencher os campos obrigatórios" library="ResourceDesafios">
+<kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
+<arg>css=#id_gender1</arg>
+<doc>Verifies radio button ``locator`` is found from current page.</doc>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210604 21:30:21.435" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210604 21:30:21.025" endtime="20210604 21:30:21.435"/>
+<msg timestamp="20210606 22:38:39.794" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210606 22:38:39.722" endtime="20210606 22:38:39.794"/>
 </kw>
-<msg timestamp="20210604 21:30:21.449" level="FAIL">ElementNotInteractableException: Message: Element &lt;a href="http://automationpractice.com/index.php?id_category=11&amp;controller=category"&gt; could not be scrolled into view
-</msg>
-<status status="FAIL" starttime="20210604 21:30:20.972" endtime="20210604 21:30:21.449"/>
+<msg timestamp="20210606 22:38:39.795" level="FAIL">Page should have contained radio button 'css=#id_gender1' but did not.</msg>
+<status status="FAIL" starttime="20210606 22:38:39.665" endtime="20210606 22:38:39.795"/>
 </kw>
-<status status="FAIL" starttime="20210604 21:30:20.971" endtime="20210604 21:30:21.450"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=customer_firstname</arg>
+<arg>Kira</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210606 22:38:39.796" endtime="20210606 22:38:39.796"/>
 </kw>
-<kw name="Fechar navegador" library="ResourceDesafios" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210604 21:30:21.451" endtime="20210604 21:30:22.329"/>
+<status status="FAIL" starttime="20210606 22:38:39.660" endtime="20210606 22:38:39.796"/>
 </kw>
-<status status="PASS" starttime="20210604 21:30:21.450" endtime="20210604 21:30:22.330"/>
+<kw name="Clicar em &quot;Registrar&quot; para finalizar o cadastro">
+<status status="NOT RUN" starttime="20210606 22:38:39.802" endtime="20210606 22:38:39.802"/>
 </kw>
-<status status="FAIL" starttime="20210604 21:30:11.960" endtime="20210604 21:30:22.330">ElementNotInteractableException: Message: Element &lt;a href="http://automationpractice.com/index.php?id_category=11&amp;controller=category"&gt; could not be scrolled into view
-</status>
+<status status="FAIL" starttime="20210606 22:38:25.516" endtime="20210606 22:38:39.802">Page should have contained radio button 'css=#id_gender1' but did not.</status>
 </test>
-<status status="FAIL" starttime="20210604 21:30:11.707" endtime="20210604 21:30:22.332"/>
+<status status="FAIL" starttime="20210606 22:38:25.343" endtime="20210606 22:38:39.805"/>
 </suite>
 <statistics>
 <total>
