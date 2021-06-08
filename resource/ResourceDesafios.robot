@@ -27,57 +27,42 @@ Digitar o nome do produto "${PRODUTO}" no campo de Pesquisa
 Clicar no botão pesquisar
     Click Element       name=submit_search
 
-
-#Passar o mouse por cima da categoria "${PRODUTO}" no meu principal superior de categorias
-#    Wait Until Element Is Visible       xpath=//*[@id="header_logo"]//*[@src='http://automationpractice.com/img/logo.jpg']
-#    Title Should Be                     My Store
-#    Scroll Element Into View            //*[@id="block_top_menu"]/ul/li[1]//*[@title='Women'][@class='sf-with-ul']
-#    Mouse Over      xpath=//*[@id="block_top_menu"]/ul/li[1]//*[@title='Women'][@class='sf-with-ul']
-
-
-#Clicar na sub categoria "${SUB_PRODUTO}" 
-#    Scroll Element Into View        xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
-#    Wait Until Element Is Enabled       xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
-#    Scroll Element Into View        xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
-#    Click Element       css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a
-
-
 Passar o mouse por cima da categoria "${PRODUTO}" no meu principal superior de categorias
     Wait Until Element Is Visible       xpath=//*[@id="header_logo"]//*[@src='http://automationpractice.com/img/logo.jpg']
     Title Should Be                     My Store
-#    Scroll Element Into View            //*[@id="block_top_menu"]/ul/li[1]//*[@title='Women'][@class='sf-with-ul']
-    Mouse Over      xpath=//*[@id="block_top_menu"]/ul/li[1]//*[@title='Women'][@class='sf-with-ul']
+    Mouse Over                          xpath=//*[@id="block_top_menu"]/ul/li[1]//*[@title='Women'][@class='sf-with-ul']
 
 
 Clicar na sub categoria "${SUB_PRODUTO}" 
     Wait Until Element Is Visible       xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
-    Wait Until Element Contains     ${PRODUTO}      ${SUB_PRODUTO}
-    Scroll Element Into View        xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
-#    Wait Until Element Is Enabled       xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
-#    Scroll Element Into View        xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
-    Click Element       css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a
-
-
-
-
-
-
+    Scroll Element Into View            xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
+    Click Element                       css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a
 
 
 
 Clicar no botão "${BOTÃO}" do produto
     Wait Until Element Is Visible       css=#center_column > h1 > span.heading-counter
     Title Should Be                     Search - My Store
-    Element Should Be Enabled       //*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/1/1-home_default.jpg'] 
-    Scroll Element Into View        xpath=//*[@id="center_column"]//*[@title='Add to cart']
-    Click Button        "Add to cart"
+    Mouse Over      //*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/1/1-home_default.jpg'] 
+    Wait Until Element Is Visible       xpath=//*[@id="center_column"]//*[@title='Add to cart']       
+#    Scroll Element Into View            xpath=//*[@id="center_column"]//a[@title='Add to cart'][@data-id-product='1']
+#    Mouse Over      xpath=//*[@id="center_column"]//a[@title='Add to cart'][@data-id-product='1']
+#    Click Button        xpath=//*[@id="center_column"]//a[@title='Add to cart']        
+#    Click Button        xpath=//*[@id="center_column"]//a[@title='Add to cart'][@data-id-product='1']
+#    Click Button       css=#center_column > ul > li > div > div.right-block > div.button-container > a.button.ajax_add_to_cart_button.btn.btn-default > span
+    Click Element        ${BOTÃO}
 
-
-Clicar no botão "Proceed to checkout"
+Clicar no botão "${CONT_COMPRA}"
+    Wait Until Element Is Visible       xpath=//*[@id="layer_cart"]/div[1]/div[2]
+    Scroll Element Into View            css=#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a > span
+    #Title Should Be                     Search - My Store
+#    Mouse Over                          css=#header > div:nth-child(3) > div > div > div:nth-child(3) > div
+#    Wait Until Element Is Visible       xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/div
+#    Mouse Over                          xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/div
 
 
 Clicar no ícone carrinho de compras no menu superior direito
-    Click Element       css=#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > b
+    Click Element       xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
 
 
 Clicar no botão de remoção de produtos(delete) no produto carrinho
@@ -92,8 +77,8 @@ Clicar no botão superior direito "${LINK}"
 Inserir um e-mail válido
        Input Text      css=#email_create       gislaine28@exemplo.com
 
-Clicar no botão "${SUB}"
-    Click Button        css=#SubmitCreate
+#Clicar no botão "${SUB_INSC}"
+#    Click Button        css=#SubmitCreate
 
 Preencher os campos obrigatórios
     Page Should Contain Radio Button        css=#id_gender1
