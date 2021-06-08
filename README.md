@@ -60,3 +60,11 @@ Realizando os desafios propostos em aula.
 6º Dia
 
 Ajustando testes do desafio.
+
+-------------------------------------------------------------------------
+
+7º Dia
+Parte 1 e 2
+
+Corrigido cenário 3 e 4, realizando validação dos demais cenários.
+

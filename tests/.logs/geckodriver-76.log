@@ -1,0 +1,12 @@
+1623115782078	geckodriver	INFO	Listening on 127.0.0.1:44627
+1623115783088	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileAf0UUq"
+1623115786905	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileAf0UUq/search.json.mozlz4", (void 0)))
+1623115796575	Marionette	INFO	Listening on port 41711
+1623115796763	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623115835049	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:237:19
+TimedPromise@chrome://marionette/content/sync.js:222:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:431:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1623115850746	Marionette	INFO	Stopped listening on port 41711
