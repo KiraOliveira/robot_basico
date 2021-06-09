@@ -2,7 +2,8 @@
 Library         SeleniumLibrary
 
 *** Variable ***
-${BROWSER}      firefox
+#${BROWSER}      firefox
+${BROWSER}      chrome
 ${URL}          http://automationpractice.com
 
 
@@ -32,41 +33,31 @@ Passar o mouse por cima da categoria "${PRODUTO}" no meu principal superior de c
     Title Should Be                     My Store
     Mouse Over                          xpath=//*[@id="block_top_menu"]/ul/li[1]//*[@title='Women'][@class='sf-with-ul']
 
-
 Clicar na sub categoria "${SUB_PRODUTO}" 
     Wait Until Element Is Visible       xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
     Scroll Element Into View            xpath=/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/ul/li[3]/a
     Click Element                       css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a
 
-
-
 Clicar no botão "${BOTÃO}" do produto
     Wait Until Element Is Visible       css=#center_column > h1 > span.heading-counter
     Title Should Be                     Search - My Store
-    Mouse Over      //*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/1/1-home_default.jpg'] 
-    Wait Until Element Is Visible       xpath=//*[@id="center_column"]//*[@title='Add to cart']       
-#    Scroll Element Into View            xpath=//*[@id="center_column"]//a[@title='Add to cart'][@data-id-product='1']
-#    Mouse Over      xpath=//*[@id="center_column"]//a[@title='Add to cart'][@data-id-product='1']
-#    Click Button        xpath=//*[@id="center_column"]//a[@title='Add to cart']        
-#    Click Button        xpath=//*[@id="center_column"]//a[@title='Add to cart'][@data-id-product='1']
-#    Click Button       css=#center_column > ul > li > div > div.right-block > div.button-container > a.button.ajax_add_to_cart_button.btn.btn-default > span
-    Click Element        ${BOTÃO}
+    Mouse Over      xpath=//*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/1/1-home_default.jpg'] 
+    Scroll Element Into View            xpath=//*[@id="center_column"]//a[@title='Add to cart'][@data-id-product='1']
+    Double Click Element        xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]/span
 
 Clicar no botão "${CONT_COMPRA}"
     Wait Until Element Is Visible       xpath=//*[@id="layer_cart"]/div[1]/div[2]
     Scroll Element Into View            css=#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a > span
-    #Title Should Be                     Search - My Store
-#    Mouse Over                          css=#header > div:nth-child(3) > div > div > div:nth-child(3) > div
-#    Wait Until Element Is Visible       xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/div
-#    Mouse Over                          xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/div
+    Double Click Element        xpath=//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a/span
 
 
 Clicar no ícone carrinho de compras no menu superior direito
-    Click Element       xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
+    Mouse Over      xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
 
 
 Clicar no botão de remoção de produtos(delete) no produto carrinho
-
+    Wait Until Element Is Visible       xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a/b
+    Double Click Element       xpath=//*[@id="header"]//a[@title="remove this product from my cart"]
 
 
 Clicar no botão superior direito "${LINK}"

@@ -68,3 +68,10 @@ Parte 1 e 2
 
 Corrigido cenário 3 e 4, realizando validação dos demais cenários.
 
+------------------------------------------------------------------------
+
+8º Dia
+
+Testes 1, 2, 3 e 4 Completos.
+
+5 e 6 metade completos
