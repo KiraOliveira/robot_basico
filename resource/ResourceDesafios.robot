@@ -41,45 +41,50 @@ Clicar na sub categoria "${SUB_PRODUTO}"
 Clicar no botão "${BOTÃO}" do produto
     Wait Until Element Is Visible       css=#center_column > h1 > span.heading-counter
     Title Should Be                     Search - My Store
-    Mouse Over      xpath=//*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/1/1-home_default.jpg'] 
+    Mouse Over                          xpath=//*[@id="center_column"]//*[@src='http://automationpractice.com/img/p/1/1-home_default.jpg'] 
     Scroll Element Into View            xpath=//*[@id="center_column"]//a[@title='Add to cart'][@data-id-product='1']
-    Double Click Element        xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]/span
+    Double Click Element                xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]/span
 
 Clicar no botão "${CONT_COMPRA}"
     Wait Until Element Is Visible       xpath=//*[@id="layer_cart"]/div[1]/div[2]
     Scroll Element Into View            css=#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a > span
-    Double Click Element        xpath=//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a/span
+    Double Click Element                xpath=//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a/span
 
-
+ 
 Clicar no ícone carrinho de compras no menu superior direito
-    Mouse Over      xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
+    Mouse Down      xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
 
 
+##Descobrir como fazer a deleção do produto
 Clicar no botão de remoção de produtos(delete) no produto carrinho
-    Wait Until Element Is Visible       xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a/b
-    Double Click Element       xpath=//*[@id="header"]//a[@title="remove this product from my cart"]
+#    Wait Until Element Is Visible       xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
+#    Page Should Contain Button     xpath=//*[@id="header"]//a[@title="remove this product from my cart"]
+#    Scroll Element Into View        xpath=//*[@id="header"]//a[@title="remove this product from my cart"] 
+#    Click Element       xpath=xpath=//*[@id="header"]//a[@title="remove this product from my cart"]
 
 
 Clicar no botão superior direito "${LINK}"
     Wait Until Element Is Visible       xpath=//*[@id="header_logo"]//*[@src='http://automationpractice.com/img/logo.jpg']
     Title Should Be                     My Store
-    Click Link      xpath=//*[@id="header"]//a[@class='login']
+    Click Link                          xpath=//*[@id="header"]//a[@class='login']
 
 Inserir um e-mail válido
        Input Text      css=#email_create       gislaine28@exemplo.com
 
-#Clicar no botão "${SUB_INSC}"
-#    Click Button        css=#SubmitCreate
+Clique no botão "${SUB_INSC}"
+    Click Button        css=#SubmitCreate
 
 Preencher os campos obrigatórios
-    Page Should Contain Radio Button        css=#id_gender1
+    Radio Button Should Be Set To       css=#uniform-id_gender1 css=#id_gender2
+    #xpath=//*[@id="uniform-id_gender2"]
     Input Text      id=customer_firstname       Kira
 #    Input Text      name="customer_lastname"        Oliveira
 #    Input Text      id="email"                      gislaine28@exemplo.com
 #    Input Password      name="passwd"                   1234
 
 
-#    Clicar em "Registrar" para finalizar o cadastro
+Clicar em "${REGISTRAR}" para finalizar o cadastro
+    Click Button        name="submitAccount"
 
 
 ### Conferências

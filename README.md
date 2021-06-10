@@ -75,3 +75,9 @@ Corrigido cenário 3 e 4, realizando validação dos demais cenários.
 Testes 1, 2, 3 e 4 Completos.
 
 5 e 6 metade completos
+
+-------------------------------------------------------
+
+9º Dia
+
+Correção do teste 5 e continuidade no 6

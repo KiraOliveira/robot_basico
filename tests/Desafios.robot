@@ -38,17 +38,17 @@ Caso de Teste 04: Adicionar Produtos no Carrinho
     Clicar no botão "Proceed to checkout"
 
 
-#Caso de Teste 05: Remover Produtos
-#    Acessar a página home do site
-#    Clicar no ícone carrinho de compras no menu superior direito
+Caso de Teste 05: Remover Produtos
+    Acessar a página home do site
+    Clicar no ícone carrinho de compras no menu superior direito
 #    clicar no botão de remoção de produtos(delete) no produto carrinho
 
 
-#Caso de Teste 06: Adicionar Cliente
-#    Acessar a página home do site
-#    Clicar no botão superior direito "Sign in"
-#    Inserir um e-mail válido
-#    Clicar no botão "Create na account"
+Caso de Teste 06: Adicionar Cliente
+    Acessar a página home do site
+    Clicar no botão superior direito "Sign in"
+    Inserir um e-mail válido
+    Clique no botão "Create na account"
 #    Preencher os campos obrigatórios
 #    Clicar em "Registrar" para finalizar o cadastro
     
