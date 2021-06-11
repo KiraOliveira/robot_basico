@@ -81,3 +81,9 @@ Testes 1, 2, 3 e 4 Completos.
 9º Dia
 
 Correção do teste 5 e continuidade no 6
+
+------------------------------------------------------
+
+10º
+
+Finalização do Cenário 6 e ajuste no 5
