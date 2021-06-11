@@ -55,6 +55,7 @@ Clicar no ícone carrinho de compras no menu superior direito
     Mouse Down      xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
 
 
+
 ##Descobrir como fazer a deleção do produto
 Clicar no botão de remoção de produtos(delete) no produto carrinho
 #    Wait Until Element Is Visible       xpath=//*[@id="header"]/div[3]/div/div/div[3]/div/a
@@ -69,22 +70,35 @@ Clicar no botão superior direito "${LINK}"
     Click Link                          xpath=//*[@id="header"]//a[@class='login']
 
 Inserir um e-mail válido
-       Input Text      css=#email_create       gislaine28@exemplo.com
+    Input Text      css=#email_create       gislaine28@exemplo.com
 
 Clique no botão "${SUB_INSC}"
     Click Button        css=#SubmitCreate
 
 Preencher os campos obrigatórios
-    Radio Button Should Be Set To       css=#uniform-id_gender1 css=#id_gender2
-    #xpath=//*[@id="uniform-id_gender2"]
+    Wait Until Element Is Visible       css=#noSlide > h1
+    Wait Until Element Is Visible       css=#account-creation_form > div:nth-child(1) > h3
+    Click Element                       css=#id_gender2
     Input Text      id=customer_firstname       Kira
-#    Input Text      name="customer_lastname"        Oliveira
-#    Input Text      id="email"                      gislaine28@exemplo.com
-#    Input Password      name="passwd"                   1234
+    Input Text      id=customer_lastname        Oliveira
+    Input Text      id=email                      gislaine28@exemplo.com
+    Input Password      name=passwd                   1234
+    Click Element       css=#account-creation_form > div:nth-child(1) > div:nth-child(8) > label
+    Wait Until Element Is Visible       css=#account-creation_form > div:nth-child(2) > h3
+    Input Text      css=#company        KOW
+    Input Text      css=#address1       Rua Laura 124
+    Input Text      css=#address2       Rua Moura Brasil 154
+    Input Text      css=#city           Curitiba
+    #Page Should Contain List        css=#uniform-id_state       Georgia
+    Input Text      css=#postcode       00000-000
+    Input Text      css=#other      Kira é Linda
+    Input Text      css=#phone      0413333-3333
+    Input Text      css=#phone_mobile       04199999-9999
+    Input Text      css=#alias      Teste Teste
 
 
 Clicar em "${REGISTRAR}" para finalizar o cadastro
-    Click Button        name="submitAccount"
+    Click Button        css=#submitAccount
 
 
 ### Conferências

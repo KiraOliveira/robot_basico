@@ -49,8 +49,8 @@ Caso de Teste 06: Adicionar Cliente
     Clicar no botão superior direito "Sign in"
     Inserir um e-mail válido
     Clique no botão "Create na account"
-#    Preencher os campos obrigatórios
-#    Clicar em "Registrar" para finalizar o cadastro
+    Preencher os campos obrigatórios
+    Clicar em "Registrar" para finalizar o cadastro
     
 
 *** Keywords ***
