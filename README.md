@@ -74,16 +74,23 @@ Corrigido cenário 3 e 4, realizando validação dos demais cenários.
 
 Testes 1, 2, 3 e 4 Completos.
 
-5 e 6 metade completos
+5 e 6 metade completos.
 
 -------------------------------------------------------
 
 9º Dia
 
-Correção do teste 5 e continuidade no 6
+Correção do teste 5 e continuidade no 6.
 
 ------------------------------------------------------
 
-10º
+10º Dia
 
-Finalização do Cenário 6 e ajuste no 5
+Finalização do Cenário 6 e ajuste no 5.
+
+
+----------------------------------------------------------
+
+11º Dia
+
+Realizado a prática dos cenários do desafio, nos demais scrips de teste.
