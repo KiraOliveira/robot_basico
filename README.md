@@ -94,3 +94,9 @@ Finalização do Cenário 6 e ajuste no 5.
 11º Dia
 
 Realizado a prática dos cenários do desafio, nos demais scrips de teste.
+
+-----------------------------------------------------------------------------
+
+12º Dia
+
+Ajuste dos testes para selecionar, datas, estado e país.

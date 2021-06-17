@@ -76,25 +76,27 @@ Clique no botão "${SUB_INSC}"
     Click Button        css=#SubmitCreate
 
 Preencher os campos obrigatórios
-    Wait Until Element Is Visible       css=#noSlide > h1
+    Wait Until Element Is Visible       xpath=//*[@id="noSlide"]/h1
     Wait Until Element Is Visible       css=#account-creation_form > div:nth-child(1) > h3
     Click Element                       css=#id_gender2
     Input Text      id=customer_firstname       Kira
     Input Text      id=customer_lastname        Oliveira
     Input Text      id=email                      gislaine28@exemplo.com
     Input Password      name=passwd                   1234
+    Set Focus To Element        id=days
     Click Element       css=#account-creation_form > div:nth-child(1) > div:nth-child(8) > label
     Wait Until Element Is Visible       css=#account-creation_form > div:nth-child(2) > h3
-    Input Text      css=#company        KOW
-    Input Text      css=#address1       Rua Laura 124
-    Input Text      css=#address2       Rua Moura Brasil 154
-    Input Text      css=#city           Curitiba
-    #Page Should Contain List        css=#uniform-id_state       Georgia
-    Input Text      css=#postcode       00000-000
-    Input Text      css=#other      Kira é Linda
-    Input Text      css=#phone      0413333-3333
-    Input Text      css=#phone_mobile       04199999-9999
-    Input Text      css=#alias      Teste Teste
+    Input Text      id=company        KOW
+    Input Text      id=address1       Rua Laura 124
+    Input Text      id=address2       Rua Moura Brasil 154
+    Input Text      id=city           Curitiba
+    Set Focus To Element        id=id_state
+    Input Text      id=postcode       00000-000
+    Set Focus To Element        id=id_country
+    Input Text      id=other      Kira é Linda
+    Input Text      id=phone      0413333-3333
+    Input Text      id=phone_mobile       04199999-9999
+    Input Text      id=alias      Teste Teste
 
 
 Clicar em "${REGISTRAR}" para finalizar o cadastro
