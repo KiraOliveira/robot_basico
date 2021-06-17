@@ -34,12 +34,11 @@ Caso de Teste 03: Listar Produtos
     Então clique na sub categoria "Summer Dresses"
 
 
-Caso de Teste 04: Adicionar Produtos no Carrinho
-    Dado que estou na página home do site
-    Quando eu pesquisar pelo produto "t-shirt"
-    Clicar no botão "Add to cart" do produto 
-    
-    Clicar no botão "Proceed to checkout"
+#Caso de Teste 04: Adicionar Produtos no Carrinho
+#    Dado que estou na página home do site
+#    Quando eu pesquisar pelo produto "t-shirt"
+#    Quando clicar no botão "Add to cart" do produto 
+#    Então clique no botão "Proceed to checkout"
 
 
 #Caso de Teste 05: Remover Produtos
@@ -48,22 +47,22 @@ Caso de Teste 04: Adicionar Produtos no Carrinho
 #    clicar no botão de remoção de produtos(delete) no produto carrinho
 
 
-Caso de Teste 06: Adicionar Cliente
-    Dado que estou na página home do site
-    Clicar no botão superior direito "Sign in"
-    Inserir um e-mail válido
-    Clique no botão "Create na account"
-    Preencher os campos obrigatórios
-    Clicar em "Registrar" para finalizar o cadastro       
+#Caso de Teste 06: Adicionar Cliente
+#    Dado que estou na página home do site
+#    Quando clicar no botão superior direito "Sign in"
+#    Quando inserir um e-mail válido
+#    Quando clique no botão "Create na account"
+#    Quando preencher os campos obrigatórios
+#    Então clicar em "Registrar" para finalizar o cadastro       
 
 
 *** Keywords ***
 Dado que estou na página home do site
-    Acessar a página home do site  
+#    Acessar a página home do site  
 
 Quando eu pesquisar pelo produto "${PRODUTO}"  
-    Digitar o nome do produto "${PRODUTO}" no campo de Pesquisa
-    Clicar no botão pesquisar
+#    Digitar o nome do produto "${PRODUTO}" no campo de Pesquisa
+#    Clicar no botão pesquisar
 
 Então o produto "${PRODUTO}" deve ser listado na página de resultado de busca   
     Conferir se o produto "${PRODUTO}" foi listado no site
@@ -71,4 +70,11 @@ Então o produto "${PRODUTO}" deve ser listado na página de resultado de busca
 
 Então a página deve exibir a mensagem "${MENSAGEM_ALERTA}" 
     Conferir mensagem de erro "${MENSAGEM_ALERTA}"
+
+
+Quando passar o mouse por cima da categoria "${PRODUTO}" no meu principal superior de categorias
+    
+    
+Então clique na sub categoria "${SUB_PRODUTO}"
+
 

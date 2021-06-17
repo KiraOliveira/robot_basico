@@ -74,11 +74,14 @@ Preencher os campos obrigatórios
     Input Text      id=customer_lastname        Oliveira
     Input Text      id=email                    gislaine28@exemplo.com
     Input Text      id=passwd                   1234
+    Set Focus To Element        id=uniform-days
     Click Element       css=#newsletter
     Input Text      id=company                  KOW
     Input Text      id=address1                 Rua Laura 15
     Input Text      id=city                     Curitiba
+    Set Focus To Element        id=id_state
     Input Text      id=postcode                 00000-000
+    Set Focus To Element        id=id_country
     Input Text      id=other                    Teste
     Input Text      id=phone_mobile             99999-9999
 
