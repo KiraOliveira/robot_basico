@@ -105,4 +105,6 @@ Ajuste dos testes para selecionar, datas, estado e país.
 
 05/07
 
-Alteração realizada na seleção
+Alteração realizada na seleção de aniversário
+
+![imagem](TestSitePractice.png)
