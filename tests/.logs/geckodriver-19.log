@@ -1,9 +1,0 @@
-1622774097396	geckodriver	INFO	Listening on 127.0.0.1:38605
-1622774098407	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletl9HgH"
-1622774099370	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletl9HgH/search.json.mozlz4", (void 0)))
-1622774102712	Marionette	INFO	Listening on port 40299
-1622774102791	Marionette	WARN	TLS certificate errors will be ignored for this session
-1622774110405	Marionette	INFO	Stopped listening on port 40299
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'MarionetteEvents'
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'MarionetteEvents'

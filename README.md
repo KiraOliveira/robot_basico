@@ -108,3 +108,6 @@ Ajuste dos testes para selecionar, datas, estado e país.
 Alteração realizada na seleção de aniversário
 
 ![imagem](TestSitePractice.png)
+
+
+Git Actions
