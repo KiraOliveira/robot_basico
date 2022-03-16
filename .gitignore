@@ -1,0 +1,11 @@
+/gek_log*
+/logs*
+/logsEs*
+.logs.txt*
+.logsEs.text*
+selenium-screenshot-1.png
+selenium-screenshot-2.png
+/logB*
+/logsB*
+/tests/logs*
+

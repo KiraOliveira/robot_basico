@@ -1,0 +1,9 @@
+1623028925545	geckodriver	INFO	Listening on 127.0.0.1:49825
+1623028925559	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZCUyhr"
+1623028926345	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZCUyhr/search.json.mozlz4", (void 0)))
+1623028929040	Marionette	INFO	Listening on port 46357
+1623028929104	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+1623028992268	Marionette	INFO	Stopped listening on port 46357

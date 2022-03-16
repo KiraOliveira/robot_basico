@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.8.5 on linux)" generated="20210605 00:41:49.753" rpa="false" schemaversion="2">
+<suite id="s1" name="Desafios" source="/home/kira/Documentos/robot_basico/tests/Desafios.robot">
+<test id="s1-t1" name="Caso de Teste 06: Adicionar Cliente">
+<kw name="Abrir navegador" library="ResourceDesafios" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210605 00:41:50.044" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20210605 00:41:50.050" level="INFO">Firefox driver log is always forced to to: /home/kira/Documentos/robot_basico/tests/.logsD/geckodriver-58.log</msg>
+<status status="PASS" starttime="20210605 00:41:50.044" endtime="20210605 00:41:56.751"/>
+</kw>
+<status status="PASS" starttime="20210605 00:41:50.043" endtime="20210605 00:41:56.751"/>
+</kw>
+<kw name="Acessar a página home do site" library="ResourceDesafios">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://automationpractice.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210605 00:41:56.754" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20210605 00:41:56.753" endtime="20210605 00:42:02.126"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210605 00:42:02.314" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210605 00:42:02.135" endtime="20210605 00:42:02.314"/>
+</kw>
+<status status="PASS" starttime="20210605 00:41:56.752" endtime="20210605 00:42:02.314"/>
+</kw>
+<kw name="Clicar no botão superior direito &quot;Sign in&quot;" library="ResourceDesafios" sourcename="Clicar no botão superior direito &quot;${LINK}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header_logo"]//*[@src='http://automationpractice.com/img/logo.jpg']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210605 00:42:02.315" endtime="20210605 00:42:02.451"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210605 00:42:02.482" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210605 00:42:02.451" endtime="20210605 00:42:02.482"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header"]//a[@class='login']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210605 00:42:02.483" level="INFO">Clicking link 'xpath=//*[@id="header"]//a[@class='login']'.</msg>
+<status status="PASS" starttime="20210605 00:42:02.483" endtime="20210605 00:42:05.222"/>
+</kw>
+<status status="PASS" starttime="20210605 00:42:02.315" endtime="20210605 00:42:05.223"/>
+</kw>
+<kw name="Inserir um e-mail válido" library="ResourceDesafios">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=#email_create</arg>
+<arg>gislaine28@exemplo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210605 00:42:05.232" level="INFO">Typing text 'gislaine28@exemplo.com' into text field 'css=#email_create'.</msg>
+<status status="PASS" starttime="20210605 00:42:05.230" endtime="20210605 00:42:05.617"/>
+</kw>
+<status status="PASS" starttime="20210605 00:42:05.230" endtime="20210605 00:42:05.618"/>
+</kw>
+<kw name="Clicar no botão &quot;Create na account&quot;" library="ResourceDesafios" sourcename="Clicar no botão &quot;${SUB}&quot;">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=#SubmitCreate</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210605 00:42:05.620" level="INFO">Clicking button 'css=#SubmitCreate'.</msg>
+<status status="PASS" starttime="20210605 00:42:05.619" endtime="20210605 00:42:06.176"/>
+</kw>
+<status status="PASS" starttime="20210605 00:42:05.618" endtime="20210605 00:42:06.176"/>
+</kw>
+<kw name="Preencher os campos obrigatórios" library="ResourceDesafios">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name="customer_lastname"</arg>
+<arg>Oliveira</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210605 00:42:06.177" level="INFO">Typing text 'Oliveira' into text field 'name="customer_lastname"'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210605 00:42:06.380" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210605 00:42:06.186" endtime="20210605 00:42:06.380"/>
+</kw>
+<msg timestamp="20210605 00:42:06.403" level="FAIL">InvalidSelectorException: Message: Given css selector expression "[name=""customer_lastname""]" is invalid: SyntaxError: Document.querySelectorAll: '[name=""customer_lastname""]' is not a valid selector
+</msg>
+<status status="FAIL" starttime="20210605 00:42:06.177" endtime="20210605 00:42:06.404"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id="email"</arg>
+<arg>gislaine28@exemplo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210605 00:42:06.404" endtime="20210605 00:42:06.404"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name="passwd"</arg>
+<arg>1234</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210605 00:42:06.405" endtime="20210605 00:42:06.405"/>
+</kw>
+<status status="FAIL" starttime="20210605 00:42:06.176" endtime="20210605 00:42:06.406"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceDesafios" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210605 00:42:06.409" endtime="20210605 00:42:07.769"/>
+</kw>
+<status status="PASS" starttime="20210605 00:42:06.407" endtime="20210605 00:42:07.769"/>
+</kw>
+<status status="FAIL" starttime="20210605 00:41:50.042" endtime="20210605 00:42:07.770">InvalidSelectorException: Message: Given css selector expression "[name=""customer_lastname""]" is invalid: SyntaxError: Document.querySelectorAll: '[name=""customer_lastname""]' is not a valid selector
+</status>
+</test>
+<status status="FAIL" starttime="20210605 00:41:49.756" endtime="20210605 00:42:07.772"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Desafios">Desafios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
